@@ -165,7 +165,9 @@ Themes: Introduction, Firebase Authentication, Firebase UI, Firebase SDK, Fireba
 Firebase Cloud Storage, Firebase Hosting, Firebase Cloud Function, Firebase Crashlytics, Clud Messaging, In-App-Messaging, 
 Dynamic Link, AdMob
 
-complete sourcecodes
+complete sourcecodes for several examples
+
+## hackernoon.com User authentication in android using firebase (Java)
 
 User Authentication in Android using Firebase (Java): https://hackernoon.com/user-authentication-in-android-using-firebase-java 
 with Source code and setup Firebase project using the assistant
