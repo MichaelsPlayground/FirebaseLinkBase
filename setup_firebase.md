@@ -149,3 +149,12 @@ dependencies {
 
 Now we are ready to start the auth app within Android Studio - it is running on a real device or an emulator.
 
+This is the error message you encounter when running one of the module without a "google-services.json" file 
+in the app folder of your module:
+
+```plaintext
+Execution failed for task ':database:app:processDebugGoogleServices'.
+File google-services.json is missing. 
+The Google Services Plugin cannot function without it. 
+```
+
