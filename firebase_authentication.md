@@ -3,6 +3,10 @@
 This is usually the first step to setup a Firebase based application as we talk about sensitive data 
 that is stored by your app users within the Firebase database and storage.
 
+Although a successful authentication is necessary for database and storage projects, sometimes a 
+project just requires an authentication of an user (without any storage or database purposes) - this is 
+a perfect and easy solution if you should need a verified Email address.
+
 ## Authentication with Email and Password
 
 After you deployed your app (here on an emulator) you press the "EmailPasswordFragment" entry:
@@ -38,7 +42,7 @@ Please press the AnonymousAuthFragment" entry for this authentication option.
 If you are still signed in from the previous step press the "Sign out" button and then "Sign in" - there is a 
 new User ID and the "Email: null" shows that no Email was used.
 
-The Firebase console shows an anonymous user and the numbr will raise until an anonymous user decides to 
+The Firebase console shows an anonymous user and the number will raise until an anonymous user decides to 
 "sign out", so this may litter your account...
 
 ## Authentication with a Google account
