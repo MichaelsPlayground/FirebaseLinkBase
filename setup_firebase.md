@@ -3,7 +3,8 @@
 To run Firebase project it is necessary to setup your project in the Firebase console. Follow the link
 https://console.firebase.google.com/ and **login with your Google account**.
 
-This are the steps I used to setup the project for the **Firebase Quickstart Android** project.
+This are the steps I used to setup the project for the **Firebase Quickstart Android** project using the "**Authentication**" module. 
+For other modules there are additional steps necessary.
 
 **Recommendation**: In the first time you will setup a lot of projects but the number of projects is limited
 (about 10 projects are allowed) and I strongly recommend to **use a second, "test" account** for the setups and 
@@ -40,4 +41,83 @@ project allows for testing several Firebase modules like Authentication, Realtim
 check the individual **applicationId** you find in the specific "build.gradle.build.kts" file for the "module :auth:app". For that reason 
 I'm using the value "**com.google.firebase.quickstart.auth**" as data ! 
 6) Register your app by providing the package name (see step 1), in my example it's **com.google.firebase.quickstart.auth** (see above note)
-7)  
+7) Entering an apps "nickname" is optional, I'm using "Quickstart Android" 
+8) Please enter the "Debug signing certificate SHA-1" because we will need this for minimum obe module later (see step 1 part 2 above), again: 
+please your OWN SHA1 value
+9) press "Register app" and wait some seconds
+10) your setup is complete, click on "Download google-services.json" and save this file locally on your device.
+11) Press "Next" button to get the data for the actual dependencies you need to app to your Gradle and setting files
+12) In the  "plugins" section of your **root build.gradle** file (project-level) add this dependency and press "Sync now":
+```plaintext
+// Add the dependency for the Google services Gradle plugin
+id 'com.google.gms.google-services' version '4.4.0' apply false
+```
+13) In the  **module build.gradle** file (app-level) add these modules and dependencies and press "Sync now":
+```plaintext
+plugins {
+  id 'com.android.application'
+  // Add the Google services Gradle plugin
+  id 'com.google.gms.google-services'
+  ...
+}
+...
+dependencies {
+  // Import the Firebase BoM
+  implementation platform('com.google.firebase:firebase-bom:32.5.0')
+  // TODO: Add the dependencies for Firebase products you want to use
+  // When using the BoM, don't specify versions in Firebase dependencies
+  // https://firebase.google.com/docs/android/setup#available-libraries
+  
+  // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth")
+    // Google Identity Services SDK (only required for Auth with Google)
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    // Firebase UI
+    // Used in FirebaseUIActivity.
+    implementation("com.firebaseui:firebase-ui-auth:8.0.2")
+    ...
+}
+```
+Please note that I'm adding dependencies for "Google Identity Service SDK" and "Firebase UI" as they are necessary for 
+this module as well.
+14) Press "Next" and "Continue to console" to finish your project setup... but you are not ready so far !
+15) In step 10 we downloaded the "google-services.json" file, please move this file to your "app" folder. As the 
+Firebase Quickstart Android project contains several modules please move the "google-services.json" file to the 
+"auth/app" folder. If you start your app and the file is missing or at the wrong place you find a note in your Logcat 
+file and your app won't work.
+
+## step 3 configure the Authenticate options
+
+All steps above were necessary to get a connection between your app and the Firebase servers, now we need to define which 
+authentification options we are going to accept for our project. The Firebase Quickstart Android code contains e.g. the 
+authentication with a Facebook account - as I'm not having one I cannot test or use this option. For my sample app I'm 
+using the following authentications:
+- authenticate with an email address and password
+- authenticate with a Google account
+- authenticate anonymously (without any account)
+
+Please keep in mind that it depends on your specific needs what kind of authentication options you are using.
+
+In step 2 the final action was to return to the Firebase's console and now it's the right time to **choose a product**, in this  
+case I'm adding the **Authentication** product - simply press on the large button "Authentication".
+1) click on "Get started" and wait some seconds
+2) we need to choose one or more "Sign-in provider", as a start we use the native provider "Email/password" and click on the button
+3) Enable "Email/Password" but leave "Email link (passwordless sign-in)" disabled a this requires some more steps to setup. Press "save".
+4) That was easy - the "Email/Password" is enabled now. Now press the button "Add new provider" for another provider
+5) Press "Anonymous" in the overview
+6) Enable the switch for the "Anonymous" provider and click on "Save"
+7) As a last example press "Add new Provider" and press the "Google" button
+8) Enable the switch for the "Google" provider and choose the Email address of your Google account as "Support email for project".
+9) Press "Save" and we should be ready now, but a message appears: "Can't enable Google sign-in. An identical OAuth client already exists." 
+This is accompanied by the note that we need to run some more steps:
+```plaintext
+Enabling Google sign-in for the first time creates new OAuth clients, which are automatically added to the config files for your apps.
+
+Download and replace the configuration files in your apps so that you can use Google sign-in for your apps.
+
+After replacing your config files, finish setting up Google sign-in for Android and Apple apps. 
+```
+See: Authenticate with Google on Android, Link: https://firebase.google.com/docs/auth/android/google-signin
+
+See: Authenticate with Google on Android, Link: https://firebase.google.com/docs/auth/android/google-signin?hl=en&authuser=0&_gl=1*1fbtazb*_ga*MjAwMDk1NjQyMy4xNjk5MTg0MjU1*_ga_CW55HF8NVT*MTY5OTM1MjgxNy44LjEuMTY5OTM1Njc2Ni4xMy4wLjA.
+
