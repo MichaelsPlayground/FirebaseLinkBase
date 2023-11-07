@@ -11,6 +11,12 @@ For other modules there are additional steps necessary.
 not your regular Google account. This is because you cannot delete projects no longer in use and reuse the 
 project space again - you have to wait some weeks before the console accepts new projects.
 
+**Error note**: If you are using the given (default) "applicationId" = "com.google.firebase.quickstart.auth" you 
+will run into the problem that the Google authentication will fail, see step 3 action 9. If you want to avoid this 
+you should better rename the applicationId (find it in the modules/apps build.gradle file for the "auth" module) to 
+a unique one. I have chosen "de.androidcrypto.firebase.quickstart.auth". Please keep in mind that you need to change 
+the applicationId on all further modules as well !
+
 ## step 1: get your project data
 
 Your Firebase project is bundled with your Java (Kotlin) project in Android Studio AND with the local keystore 
@@ -109,7 +115,12 @@ case I'm adding the **Authentication** product - simply press on the large butto
 7) As a last example press "Add new Provider" and press the "Google" button
 8) Enable the switch for the "Google" provider and choose the Email address of your Google account as "Support email for project".
 9) Press "Save" and we should be ready now, but a message appears: "Can't enable Google sign-in. An identical OAuth client already exists." 
-This is accompanied by the note that we need to run some more steps:
+** This a serious warning because it means: A package name needs to be UNIQUE when using Google authentication.** In the end you won't be 
+able to use Google authentication within your project and the only chance is a change of your application package to a unique one.
+I changed it to "de.androidcrypto.firebase.quickstart.auth", deleted the old "app" in Firebase console and added the changed one. There are some 
+additional clicks and deletion steps to go but in the end you get a running client accepting the Google authentication. 
+
+10) This is accompanied by the note that we need to run some more steps:
 ```plaintext
 Enabling Google sign-in for the first time creates new OAuth clients, which are automatically added to the config files for your apps.
 
@@ -120,4 +131,21 @@ After replacing your config files, finish setting up Google sign-in for Android 
 See: Authenticate with Google on Android, Link: https://firebase.google.com/docs/auth/android/google-signin
 
 See: Authenticate with Google on Android, Link: https://firebase.google.com/docs/auth/android/google-signin?hl=en&authuser=0&_gl=1*1fbtazb*_ga*MjAwMDk1NjQyMy4xNjk5MTg0MjU1*_ga_CW55HF8NVT*MTY5OTM1MjgxNy44LjEuMTY5OTM1Njc2Ni4xMy4wLjA.
+
+In the console go to "Project overview" and "Project settings" and download the new generated "google-services.json" file 
+(**don't forget to move the file to the auth/app folder**) and add the Google Play services library dependency to you app/module 
+"build.gradle" file (here all dependencies are shown):
+```plaintext
+dependencies {
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-auth")
+    // Also add the dependency for the Google Play services library and specify its version
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+}
+```
+
+Now we are ready to start the auth app within Android Studio - it is running on a real device or an emulator.
 
