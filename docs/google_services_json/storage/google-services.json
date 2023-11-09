@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "616826384182",
+    "firebase_url": "https://quickstartandroid-a1fa0-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "quickstartandroid-a1fa0",
+    "storage_bucket": "quickstartandroid-a1fa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616826384182:android:658474945714dd96370d97",
+        "android_client_info": {
+          "package_name": "de.androidcrypto.firebase.quickstart.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616826384182-qeljm0egrpv4j30kliv93sf7bg75d5up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.androidcrypto.firebase.quickstart.auth",
+            "certificate_hash": "1922a4d701a83d098f0493e98e21922d5a5fb054"
+          }
+        },
+        {
+          "client_id": "616826384182-nr33fgn4rbt1t33qq2bti09tiue0q26b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO2dHPqgM4MQYa9wvI382nZzcYoWbQS80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616826384182-nr33fgn4rbt1t33qq2bti09tiue0q26b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616826384182:android:89606ebeca00a22a370d97",
+        "android_client_info": {
+          "package_name": "de.androidcrypto.firebase.quickstart.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616826384182-kkdjc67ind4h8k8cekp2besnu2b234rv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.androidcrypto.firebase.quickstart.database",
+            "certificate_hash": "1922a4d701a83d098f0493e98e21922d5a5fb054"
+          }
+        },
+        {
+          "client_id": "616826384182-nr33fgn4rbt1t33qq2bti09tiue0q26b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO2dHPqgM4MQYa9wvI382nZzcYoWbQS80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616826384182-nr33fgn4rbt1t33qq2bti09tiue0q26b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616826384182:android:fcac9c7083100830370d97",
+        "android_client_info": {
+          "package_name": "de.androidcrypto.firebase.quickstart.firebasestorage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616826384182-2ts6hua3cvmbiudrti1270j46ec0oer4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.androidcrypto.firebase.quickstart.firebasestorage",
+            "certificate_hash": "1922a4d701a83d098f0493e98e21922d5a5fb054"
+          }
+        },
+        {
+          "client_id": "616826384182-nr33fgn4rbt1t33qq2bti09tiue0q26b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO2dHPqgM4MQYa9wvI382nZzcYoWbQS80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616826384182-nr33fgn4rbt1t33qq2bti09tiue0q26b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

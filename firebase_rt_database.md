@@ -22,7 +22,7 @@ This document is about the setup of a Real Time Database. We start with the prod
 3) The next step is important for your database performance: you need to choose the server location for your database: choose between a location in 
 the United States of America, Europe or in Asia. As I'm located in Germany I have chosen for "Belgium". Please note that it is not possible to change 
 this setting at a later time.
-4) The second step is about **Security rules** and I don't realy like the two possible options:
+4) The second step is about **Security rules** and I don't really like the two possible options:
 - start in **locked mode**: means a "unusable database" because no data can get appended, deleted or even read. Choose this option if you know what 
 individual rules need to get setup in a following step.
 - start in **test mode**: means the database will allow an unlimited read and write access without any limitations. As this setup is **unsecure** 
