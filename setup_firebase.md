@@ -9,7 +9,7 @@ For other modules there are additional steps necessary.
 **Recommendation**: In the first time you will setup a lot of projects but the number of projects is limited
 (about 10 projects are allowed) and I strongly recommend to **use a second, "test" account** for the setups and 
 not your regular Google account. This is because you cannot delete projects no longer in use and reuse the 
-project space again - you have to wait some weeks before the console accepts new projects.
+project space again - you have to wait some weeks before the console accepts new projects after deletion of old/unused projects.
 
 **Error note**: If you are using the given (default) "applicationId" = "com.google.firebase.quickstart.auth" you 
 will run into the problem that the Google authentication will fail, see step 3 action 9. If you want to avoid this 
@@ -49,7 +49,7 @@ I'm using the value "**com.google.firebase.quickstart.auth**" as data !
 6) Register your app by providing the package name (see step 1), in my example it's **com.google.firebase.quickstart.auth** (see above note)
 7) Entering an apps "nickname" is optional, I'm using "Quickstart Android" 
 8) Please enter the "Debug signing certificate SHA-1" because we will need this for minimum obe module later (see step 1 part 2 above), again: 
-please your OWN SHA1 value
+please use your OWN SHA1 value
 9) press "Register app" and wait some seconds
 10) your setup is complete, click on "Download google-services.json" and save this file locally on your device.
 11) Press "Next" button to get the data for the actual dependencies you need to app to your Gradle and setting files
