@@ -18,6 +18,8 @@ Learn about using and managing API keys for Firebase: https://firebase.google.co
 
 Learn more about Android and Firebase: https://firebase.google.com/docs/android/learn-more
 
+Billing plans for Firebase products: 
+
 ## Firebase Quickstarts for Android
 
 Firebase Quickstarts for Android: https://firebaseopensource.com/projects/firebase/quickstart-android/
@@ -165,7 +167,7 @@ Themes: Introduction, Firebase Authentication, Firebase UI, Firebase SDK, Fireba
 Firebase Cloud Storage, Firebase Hosting, Firebase Cloud Function, Firebase Crashlytics, Clud Messaging, In-App-Messaging, 
 Dynamic Link, AdMob
 
-complete sourcecodes for several examples
+complete source codes for several examples
 
 ## hackernoon.com User authentication in android using firebase (Java)
 

@@ -6,7 +6,7 @@ website you will find 3 products that are suitable to store data:
 **Real Time Database**: Real Time Database (RT Database) is Firebase's original database. It's an efficient, low-latency solution for mobile apps that 
 require synced states across clients in realtime.
 
-**Firestore Database**: Cloud Firestore is Firebase's newest database for mobile app development. It builds on the successes of the Realtime 
+**Cloud Firestore Database**: Cloud Firestore is Firebase's newest database for mobile app development. It builds on the successes of the Realtime 
 Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales further than the Realtime Database.
 
 If you should need to decide between RT Database and Firebase I recommend to check the link https://firebase.google.com/docs/database/rtdb-vs-firestore?hl=en.
@@ -25,8 +25,8 @@ this setting at a later time.
 4) The second step is about **Security rules** and I don't really like the two possible options:
 - start in **locked mode**: means a "unusable database" because no data can get appended, deleted or even read. Choose this option if you know what 
 individual rules need to get setup in a following step.
-- start in **test mode**: means the database will allow an unlimited read and write access without any limitations. As this setup is **unsecure** 
-the database has a time limit of 1 month. This option is good for testing purposes but there is high risk that you forget about the time limit and 
+- start in **test mode**: means the database will allow an unlimited read and write access without any limitations. As this setup is **insecure** 
+the database has a time limit of 1 month. This option is good for testing purposes but there is a high risk that you forget about the time limit and 
 are surprised when your application stops to work properly.
 
 I'm choosing the locked mode here as the sample app provides some prepared database rules in the readme.md document:
@@ -103,6 +103,16 @@ I'm choosing the locked mode here as the sample app provides some prepared datab
 }
 ```
 Copy and paste the sample rules from step 4 into the rules editor and press the "Publish" button.
+
+... or use these simplified rules:
+```plaintext
+{
+  "rules": {
+    ".read": "auth.uid != null",
+    ".write": "auth.uid != null"
+  }
+}
+```
 
 Note: If you would like to "play" a little bit try the Rules Playground.
 7) We should not forget to think about "pricing". Click on the "Usage" tab to get an idea about possible billing parameters. 
