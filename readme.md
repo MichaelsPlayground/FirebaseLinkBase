@@ -18,7 +18,9 @@ Learn about using and managing API keys for Firebase: https://firebase.google.co
 
 Learn more about Android and Firebase: https://firebase.google.com/docs/android/learn-more
 
-Billing plans for Firebase products: 
+Firebase Realtime Database rules: https://firebase.google.com/docs/database/security
+
+Billing plans for Firebase products: https://firebase.google.com/pricing
 
 ## Firebase Quickstarts for Android
 
@@ -43,7 +45,7 @@ Auth setup for Email/Password authentication:
 - Select EmailPasswordActivity from the main screen.
 - Fill in your desired email and password and click Create Account to begin.
 
-### Firebase Database Quickstart
+### Firebase Realtime Database Quickstart
 
 Link: https://firebaseopensource.com/projects/firebase/quickstart-android/database/readme
 
@@ -111,7 +113,7 @@ Database Rules - Below are some samples rules that limit access and validate dat
 }
 ```
 
-### Firestore Quickstart
+### Cloud Firestore Quickstart
 
 Link: https://firebaseopensource.com/projects/firebase/quickstart-android/firestore/readme
 
