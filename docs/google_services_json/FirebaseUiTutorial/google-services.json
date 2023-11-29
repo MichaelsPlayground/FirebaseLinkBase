@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "409205935140",
+    "firebase_url": "https://fir-tutorial-365bc-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fir-tutorial-365bc",
+    "storage_bucket": "fir-tutorial-365bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409205935140:android:e343e6c13f129b60811cb1",
+        "android_client_info": {
+          "package_name": "de.androidcrypto.firebaseuitutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409205935140-mfbji8mo1jk0n30sjgrqlajj4mcc12dn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.androidcrypto.firebaseuitutorial",
+            "certificate_hash": "1922a4d701a83d098f0493e98e21922d5a5fb054"
+          }
+        },
+        {
+          "client_id": "409205935140-eio18dc4g3456a7fbsjj0p13ctl817gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl4KTU7KXwSVsOXI7S4IbNVWaPIeBHJXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409205935140-7lph9jnun11in7gekj25nbl34aicn2of.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
