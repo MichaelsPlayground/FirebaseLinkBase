@@ -145,6 +145,13 @@ service cloud.firestore {
 
 Link: https://firebaseopensource.com/projects/firebase/quickstart-android/storage/readme
 
+Security rules on setup:
+```plaintext
+
+```
+
+
+
 ## Other repositories from Firebase
 
 Snippets for Android: https://github.com/firebase/snippets-android
